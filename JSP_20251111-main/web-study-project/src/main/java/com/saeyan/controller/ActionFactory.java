@@ -1,26 +1,22 @@
 package com.saeyan.controller;
 
-import com.saeyan.controlle.Action.FruitCheckPassForm;
-import com.saeyan.controlle.Action.FruitControlAction;
-import com.saeyan.controlle.Action.FruitItemAction;
-import com.saeyan.controlle.Action.FruitJoinAction;
-import com.saeyan.controlle.Action.FruitNDPAction;
-import com.saeyan.controlle.Action.FruitNDPformAction;
-import com.saeyan.controlle.Action.FruitNDPwriteAction;
-import com.saeyan.controlle.Action.FruitPDPAction;
-import com.saeyan.controlle.Action.FruitRequestAction;
-import com.saeyan.controlle.Action.FruitUDPAction;
-import com.saeyan.controlle.Action.FruitloginAction;
+import com.saeyan.controller.action.FruitRequestAction;
+import com.saeyan.controller.action.FruitControlAction;
+import com.saeyan.controller.action.FruitCheckPassAction;
+import com.saeyan.controller.action.FruitCheckPassFormAction;
+import com.saeyan.controller.action.FruitDeleteAction;
+import com.saeyan.controller.action.FruitJoinAction;
+import com.saeyan.controller.action.FruitNDPAction;
+import com.saeyan.controller.action.FruitNDPformAction;
+import com.saeyan.controller.action.FruitNDPwriteAction;
+import com.saeyan.controller.action.FruitUDPAction;
+import com.saeyan.controller.action.FruitJoinFormAction;
+import com.saeyan.controller.action.FruitFindIdAction;
+import com.saeyan.controller.action.FruitFindIdFormAction;
+import com.saeyan.controller.action.FruitFindPwAction;
+import com.saeyan.controller.action.FruitFindPwFormAction;
+import com.saeyan.controller.action.FruitUpdateAction;
 import com.saeyan.controller.action.Action;
-import com.saeyan.controller.action.BoardCheckPassAction;
-import com.saeyan.controller.action.BoardCheckPassFormAction;
-import com.saeyan.controller.action.BoardDeleteAction;
-import com.saeyan.controller.action.BoardListAction;
-import com.saeyan.controller.action.BoardUpdateAction;
-import com.saeyan.controller.action.BoardUpdateFormAction;
-import com.saeyan.controller.action.BoardViewAction;
-import com.saeyan.controller.action.BoardWriteAction;
-import com.saeyan.controller.action.BoardWriteFormAction;
 import com.saeyan.controller.action.FruitHomeAction;
 import com.saeyan.controller.action.FruitLoginAction;
 import com.saeyan.controller.action.ProductDeleteAction;
@@ -52,22 +48,26 @@ public class ActionFactory {
 			action = new FruitHomeAction();
 			
 		}else if (command.equals("fruit_login")) {
-			action=new FruitloginAction();
-			
-		}else if (command.equals("fruit_Request")) {
+			action = new FruitLoginAction();
+		
+		}
+		
+		
+		else if (command.equals("fruit_Request")) {
 			action=new FruitRequestAction();
 			
 		}else if (command.equals("fruit_Control")) {
 			action=new FruitControlAction();
 			
-		}else if (command.equals("fruit_Item")) {
-			action=new FruitItemAction();
+		
 			
 		}else if (command.equals("fruit_Join")) {
-			action=new FruitJoinAction();
-			
-		}else if (command.equals("fruit_PDP")) {
-			action=new FruitPDPAction();
+		    // 회원가입 화면 표시
+		    action = new FruitJoinFormAction();
+
+		}else if (command.equals("fruit_join_action")) {
+		    // 회원가입 처리
+		    action = new FruitJoinAction();
 			
 		}else if (command.equals("fruit_NDP")) {
 			action=new FruitNDPAction();
@@ -82,11 +82,30 @@ public class ActionFactory {
 			action=new FruitNDPwriteAction();
 			
 		}else if (command.equals("fruit_check_pass_form")) {
-			action=new FruitCheckPassForm();
+			action=new FruitCheckPassFormAction();
 			
+		}else if (command.equals("fruit_check_pass")) {
+			action=new FruitCheckPassAction();
+			
+		}else if (command.equals("fruit_delete")) {
+			action=new FruitDeleteAction();
 		}
+
 		
-			
+		
+		
+		else if (command.equals("fruit_update")) {
+			action = new FruitUpdateAction();
+		}else if (command.equals("fruit_find_id_form")) {
+			action = new FruitFindIdFormAction();
+		}else if (command.equals("fruit_find_id_action")) {
+			action = new FruitFindIdAction();
+		}else if (command.equals("fruit_find_pw_form")) {
+			action = new FruitFindPwFormAction();
+		}else if (command.equals("fruit_find_pw_action")) {
+			action = new FruitFindPwAction();
+		} 
+		
 		
 		
 		 else if(command.equals("product_list")) {
