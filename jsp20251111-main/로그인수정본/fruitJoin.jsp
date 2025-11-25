@@ -200,23 +200,8 @@
                     </table>
 
                     <div class="links">
-                        <input type="submit" value="확인" style="padding: 10px 30px; 
-                                  background-color: #4CAF50; 
-                                  color: white; 
-                                  border: none; 
-                                  border-radius: 5px; 
-                                  cursor: pointer; 
-                                  font-size: 16px;
-                                  font-weight: bold;
-                                  margin-right: 20px;">
-                        <input type="reset" value="취소" style="padding: 10px 30px; 
-                                  background-color: #9e9e9e; 
-                                  color: white; 
-                                  border: none; 
-                                  border-radius: 5px; 
-                                  cursor: pointer; 
-                                  font-size: 16px;
-                                  font-weight: bold;">
+                        <input type="submit" value="확인" >
+                        <input type="reset" value="취소" >
                     </div>
                 </div>
             </form>
